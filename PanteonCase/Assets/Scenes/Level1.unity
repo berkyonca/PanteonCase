@@ -1227,6 +1227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8059831586215110807}
+  - component: {fileID: 7246738972827939374}
   m_Layer: 0
   m_Name: Boy
   m_TagString: Untagged
@@ -1234,6 +1235,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &7246738972827939374
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7246738972827939373}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: b85fe62b41421a0499fd59aa7ee8cad5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8f26907e845d6f84fb9e75d06829191d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &7270868895209353567
 Transform:
   m_ObjectHideFlags: 0
