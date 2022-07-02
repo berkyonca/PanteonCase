@@ -10,13 +10,13 @@ namespace PanteonCase
 
         private Rigidbody _rb;
 
-        private float _moveBoundry;
+        private float _moveBorder;
 
         public PlayerMovement(Player player)
         {
             _player = player;
             _rb = player.GetComponent<Rigidbody>();
-            _moveBoundry = player.xBoundry;
+            _moveBorder = player.xBorder;
         }
 
         public void PlayerMove(float _verticalSpeed, float _horizontalSpeed)
@@ -44,7 +44,7 @@ namespace PanteonCase
 
             #region xPositionBoundry
 
-            float xPosBoundry = Mathf.Clamp(_player.transform.position.x, -_moveBoundry, _moveBoundry);
+            float xPosBoundry = Mathf.Clamp(_player.transform.position.x, -_moveBorder, _moveBorder);
 
             _player.transform.position = new Vector3(xPosBoundry, _player.transform.position.y, _player.transform.position.z);
 

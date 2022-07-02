@@ -9,11 +9,11 @@ namespace PanteonCase
     {
          
         private PlayerMovement _movement;
-        private float moveBoundry = 9f;
+        private float moveBorder = 9f;
 
         public bool _damageTaken { get; set; } = false;
-        public float xBoundry => moveBoundry;
-
+        public float xBorder => moveBorder;
+   
         public void Awake()
         {
             _movement = new PlayerMovement(this);

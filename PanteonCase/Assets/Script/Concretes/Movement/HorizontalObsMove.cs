@@ -4,37 +4,24 @@ using UnityEngine;
 
 namespace PanteonCase
 {
-    public class HorizontalObsMove : MonoBehaviour
+    public class HorizontalObsMove : ObstacleMovement
     {
-        private float _directionChange = 1;
-        private float _xPosSpeed = 5;
+
+        [SerializeField] [Range(-150, 150)] private float _xPosLeft;
+        [SerializeField] [Range(-150, 150)] private float _xPosRight;
+
+
+
 
 
         private void FixedUpdate()
         {
-            VerticalMovement();
+            VerticalMovement(7);
+            DirectionChanger(_xPosLeft, _xPosRight);
+
+
+            
         }
-
-
-
-
-
-
-        private void VerticalMovement()
-        {
-            transform.Translate(Vector3.right * Time.deltaTime * _xPosSpeed *_directionChange);
-            DirectionChanger();
-        }
-
-        private void DirectionChanger()
-        {
-            if (transform.position.x < -9 || transform.position.x > 9)
-            {
-                _directionChange *= -1;
-            }
-        }
-
-
 
     }
 
