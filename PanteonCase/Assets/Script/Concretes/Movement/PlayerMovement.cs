@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace PanteonCase
 {
-    public class Movement
+    public class PlayerMovement
     {
         private Player _player;
 
@@ -12,14 +12,14 @@ namespace PanteonCase
 
         private float _moveBoundry;
 
-        public Movement(Player player)
+        public PlayerMovement(Player player)
         {
             _player = player;
             _rb = player.GetComponent<Rigidbody>();
             _moveBoundry = player.xBoundry;
         }
 
-        public void PlayerMovement(float _verticalSpeed, float _horizontalSpeed)
+        public void PlayerMove(float _verticalSpeed, float _horizontalSpeed)
         {
             #region VerticalMovement
             if (_rb.velocity.z < 10)

@@ -464,63 +464,6 @@ Transform:
   m_Father: {fileID: 1672436753726811740}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &79432824681768365
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1044358534133448801, guid: 40163bfeb2d1b394f9f4e4a06855ae8a, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1044358534133448801, guid: 40163bfeb2d1b394f9f4e4a06855ae8a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1044358534133448801, guid: 40163bfeb2d1b394f9f4e4a06855ae8a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1044358534133448801, guid: 40163bfeb2d1b394f9f4e4a06855ae8a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1044358534133448801, guid: 40163bfeb2d1b394f9f4e4a06855ae8a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1044358534133448801, guid: 40163bfeb2d1b394f9f4e4a06855ae8a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1044358534133448801, guid: 40163bfeb2d1b394f9f4e4a06855ae8a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1044358534133448801, guid: 40163bfeb2d1b394f9f4e4a06855ae8a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1044358534133448801, guid: 40163bfeb2d1b394f9f4e4a06855ae8a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1044358534133448801, guid: 40163bfeb2d1b394f9f4e4a06855ae8a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1044358534133448801, guid: 40163bfeb2d1b394f9f4e4a06855ae8a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3572342340266433459, guid: 40163bfeb2d1b394f9f4e4a06855ae8a, type: 3}
-      propertyPath: m_Name
-      value: Spawners
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 40163bfeb2d1b394f9f4e4a06855ae8a, type: 3}
 --- !u!1 &261844676384886418
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,6 +838,7 @@ GameObject:
   - component: {fileID: 707057046989774488}
   - component: {fileID: 3326770250457016914}
   - component: {fileID: 3831423752998767496}
+  - component: {fileID: 3831423752998767497}
   m_Layer: 0
   m_Name: HorizontalObstacle
   m_TagString: obstacle
@@ -916,6 +860,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8836696378809578477, guid: ba2fe1e6f03def14d8838e80237bfc68, type: 3}
+--- !u!114 &3831423752998767497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3831423752998767495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d789c9fc860f3134982781e1794d33fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &4104354949801648989
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -977,13 +933,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3831423752998767495}
-  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -10.847942, y: -7.3742533, z: 38.842804}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.76, y: -6.57, z: 38.842804}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 1318851808}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4605985292512463354
 GameObject:
   m_ObjectHideFlags: 0

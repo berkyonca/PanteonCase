@@ -8,7 +8,7 @@ namespace PanteonCase
     public  class Player : MonoBehaviour, IDamageable
     {
          
-        private Movement _movement;
+        private PlayerMovement _movement;
         private float moveBoundry = 9f;
 
         public bool _damageTaken { get; set; } = false;
@@ -16,12 +16,12 @@ namespace PanteonCase
 
         public void Awake()
         {
-            _movement = new Movement(this);
+            _movement = new PlayerMovement(this);
         }
 
         private void Update() => Damage();
 
-        public void FixedUpdate() => _movement.PlayerMovement(50f, 10f);
+        public void FixedUpdate() => _movement.PlayerMove(50f, 10f);
 
 
 
