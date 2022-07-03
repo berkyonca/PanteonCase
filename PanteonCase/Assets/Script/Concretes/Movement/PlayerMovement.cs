@@ -41,14 +41,14 @@ namespace PanteonCase
             }
 
             #endregion
-
+            /*
             #region xPositionBoundry
 
             float xPosBoundry = Mathf.Clamp(_player.transform.position.x, -_moveBorder, _moveBorder);
 
             _player.transform.position = new Vector3(xPosBoundry, _player.transform.position.y, _player.transform.position.z);
 
-            #endregion
+            #endregion */
         }
 
 

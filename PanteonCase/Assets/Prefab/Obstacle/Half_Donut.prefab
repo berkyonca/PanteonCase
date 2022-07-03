@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6009111423427613489}
   - component: {fileID: 28193545504333656}
+  - component: {fileID: 8087529729910392842}
   m_Layer: 0
   m_Name: MovingStick
   m_TagString: Untagged
@@ -46,9 +47,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1629473226ff48240af4ac18d1a2912b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  _xPosLeft: -0.1
-  _xPosRight: 0.134
+  moveSpeed: 8
+--- !u!64 &8087529729910392842
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28193545504333657}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &3386910529494528269
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +247,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5697630240060887279}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.5, y: -7.364253, z: 68.9}
   m_LocalScale: {x: 30, y: 30, z: 30}
   m_Children:

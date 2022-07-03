@@ -7,8 +7,8 @@ namespace PanteonCase
     public class HorizontalObsMove : ObstacleMovement
     {
 
-        [SerializeField] [Range(-150, 150)] private float _xPosLeft;
-        [SerializeField] [Range(-150, 150)] private float _xPosRight;
+        [SerializeField] [Range(-5, 5)] private float _xPosLeft;
+        [SerializeField] [Range(-5, 5)] private float _xPosRight;
 
 
 
