@@ -7,7 +7,7 @@ namespace PanteonCase
 
     public class Player : MonoBehaviour, IDamageable
     {
-
+        
         private PlayerMovement _movement;
         private Rigidbody _rb;
         private float moveBorder = 9f;
@@ -78,6 +78,13 @@ namespace PanteonCase
            
         }
 
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("finishStructure"))
+            {
+                PlayerWin();
+            }
+        }
         public void OnCollisionStay(Collision collision)
         {
             if (collision.gameObject.CompareTag("rotatingObstacle"))
@@ -86,7 +93,11 @@ namespace PanteonCase
             }
         }
 
+        private void PlayerWin()
+        {
 
+            Destroy(this,1.5f);
+        }
       
       
     }
