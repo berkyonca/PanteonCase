@@ -9,11 +9,12 @@ TagManager:
   - player
   - rotatingObstacle
   - finishStructure
+  - paintController
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - FinishWallPaint
   - Water
   - UI
   - 

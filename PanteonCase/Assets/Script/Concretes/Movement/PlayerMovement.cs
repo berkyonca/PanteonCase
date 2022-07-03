@@ -11,6 +11,7 @@ namespace PanteonCase
         private Rigidbody _rb;
 
         private float _moveBorder;
+        public bool isFinish = false;
 
         public PlayerMovement(Player player)
         {
@@ -22,7 +23,7 @@ namespace PanteonCase
         public void PlayerMove(float _verticalSpeed, float _horizontalSpeed)
         {
             #region VerticalMovement
-            if (_rb.velocity.z < 10)
+            if (_rb.velocity.z < 10 &&  !isFinish)
             {
                 _rb.velocity += new Vector3(0f, 0f, _verticalSpeed * Time.deltaTime);
             }

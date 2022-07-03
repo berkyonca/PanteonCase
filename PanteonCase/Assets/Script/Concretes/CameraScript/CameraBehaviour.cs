@@ -13,15 +13,18 @@ namespace PanteonCase
         private Vector3 _offSet = new Vector3(0f, 7f, -8f);
 
 
-        private void Awake() => SingletonObject(this);
-
+       /* private void Awake()
+        {
+            SingletonObject(this);
+        }
+       */
         private void FixedUpdate() => CameraPosition();
 
 
         private void CameraPosition()
         {
             Vector3 _focusPos = targetPos.position + _offSet;
-            transform.position = Vector3.Lerp(transform.position, _focusPos, 5 * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, _focusPos, 8 * Time.deltaTime);
         }
 
 

@@ -13,6 +13,8 @@ namespace PanteonCase
         private float moveBorder = 9f;
         private float _yDeathPos = -8f;
 
+        private float _xValue;
+        float _sayi;
 
 
         public bool _damageTaken { get; set; } = false;
@@ -22,12 +24,12 @@ namespace PanteonCase
         {
             _rb = GetComponent<Rigidbody>();
             _movement = new PlayerMovement(this);
+     
         }
 
         public void Update()
         {
             Damage();
-            
 
         }
         public void FixedUpdate()
@@ -35,6 +37,12 @@ namespace PanteonCase
             CharacterRespawn(_yDeathPos);
             _movement.PlayerMove(50f, 10f);
         }
+
+
+
+
+
+
 
 
         public void Damage()
@@ -84,6 +92,12 @@ namespace PanteonCase
             {
                 PlayerWin();
             }
+            if (other.CompareTag("paintController"))
+            {
+               // PaintScore();
+            }
+
+
         }
         public void OnCollisionStay(Collision collision)
         {
@@ -95,10 +109,16 @@ namespace PanteonCase
 
         private void PlayerWin()
         {
-
-            Destroy(this,1.5f);
+            _movement.isFinish = true;
+        
         }
-      
+
+        /*
+        private void PaintScore()
+        {
+            _finishWallScript.GetComponent<FinishWallPaintScript>()._paintScore++;
+        }
+      */
       
     }
 }
