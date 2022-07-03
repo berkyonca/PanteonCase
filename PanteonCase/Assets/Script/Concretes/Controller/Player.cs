@@ -5,10 +5,11 @@ using UnityEngine;
 namespace PanteonCase
 {
 
-    public class Player : MonoBehaviour, IDamageable, ICharacterSpawn
+    public class Player : MonoBehaviour, IDamageable
     {
 
         private PlayerMovement _movement;
+        private Rigidbody _rb;
         private float moveBorder = 9f;
         private float _yDeathPos = -8f;
 
@@ -19,17 +20,19 @@ namespace PanteonCase
 
         public void Awake()
         {
+            _rb = GetComponent<Rigidbody>();
             _movement = new PlayerMovement(this);
         }
 
-        private void Update()
+        public void Update()
         {
             Damage();
-            CharacterRespawn(_yDeathPos);
+            
 
         }
         public void FixedUpdate()
         {
+            CharacterRespawn(_yDeathPos);
             _movement.PlayerMove(50f, 10f);
         }
 
@@ -45,17 +48,22 @@ namespace PanteonCase
         }
 
 
+
+        public void RotatingObstacleForce()
+
+        {
+            _rb.AddForce(Vector3.right * Time.deltaTime * 1200);
+        }
+
         public void CharacterRespawn(float yDeathPos)
         {
             float _yPos = transform.position.y;
-            if ( _yPos < yDeathPos)
+            if (_yPos < yDeathPos)
             {
                 _damageTaken = true;
             }
         }
 
-      
-        
 
 
 
@@ -67,8 +75,19 @@ namespace PanteonCase
                 _damageTaken = true;
             }
 
+           
         }
 
+        public void OnCollisionStay(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("rotatingObstacle"))
+            {
+               RotatingObstacleForce();
+            }
+        }
+
+
+      
       
     }
 }

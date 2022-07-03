@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 487722029461357538}
   - component: {fileID: 2237315036040463753}
   - component: {fileID: 6326423379888838192}
+  - component: {fileID: 8965775548250232069}
   m_Layer: 0
   m_Name: Half_Donut_Stick
   m_TagString: Untagged
@@ -238,6 +239,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8965775548250232069
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3386910529494528269}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7388368752596093529, guid: 45351d43da1c1f145b119824b0ab1a84, type: 3}
 --- !u!1 &4399875092987254227
 GameObject:
   m_ObjectHideFlags: 0

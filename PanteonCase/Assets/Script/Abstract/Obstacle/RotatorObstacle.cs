@@ -25,7 +25,6 @@ namespace PanteonCase
         private void ParentRotateMovement()
         {
             _parent.transform.Rotate(Vector3.down * _rotateSpeed * Time.deltaTime);
-            
         }
 
 

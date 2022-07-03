@@ -7,6 +7,7 @@ TagManager:
   - obstacle
   - rotatorObstacleStick
   - player
+  - rotatingObstacle
   layers:
   - Default
   - TransparentFX
