@@ -25,7 +25,7 @@ namespace PanteonCase
         private void Update()
         {
             Damage();
-            CharacterRespawn(_damageTaken, _yDeathPos);
+            CharacterRespawn(_yDeathPos);
 
         }
         public void FixedUpdate()
@@ -38,17 +38,19 @@ namespace PanteonCase
         {
             if (_damageTaken)
             {
+                transform.position = new Vector3(Random.Range(-3f, 3f), 0f, Random.Range(-1f, 6f));
+                GetComponent<Rigidbody>().velocity = Vector3.zero;
                 _damageTaken = false;
             }
         }
 
-        public void CharacterRespawn(bool _isDamaged, float yDeathPos)
+
+        public void CharacterRespawn(float yDeathPos)
         {
             float _yPos = transform.position.y;
-            if (_isDamaged || _yPos < yDeathPos)
+            if ( _yPos < yDeathPos)
             {
-                transform.position = new Vector3(Random.Range(-3f, 3f), 0f, Random.Range(-1f, 6f));
-                GetComponent<Rigidbody>().velocity = Vector3.zero;
+                _damageTaken = true;
             }
         }
 

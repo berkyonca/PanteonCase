@@ -5,7 +5,7 @@ using UnityEngine;
 public interface ICharacterSpawn 
 {
 
-    void CharacterRespawn(bool _isDamageTaken, float yDeathPos);
+    void CharacterRespawn(float yDeathPos);
 
 
 
