@@ -4,29 +4,31 @@ using UnityEngine;
 
 namespace PanteonCase
 {
-public abstract class SingletonBehaviour<T> : MonoBehaviour
-{
-        public static T Instance { get; private set; }
+    public class SingletonBehaviour : MonoBehaviour
+    {
 
-        protected void SingletonObject(T entity)
+        public static SingletonBehaviour Instance { get; private set; }
+
+
+
+        private void Awake()
+        {
+            SingletonThis();
+        }
+
+       public void SingletonThis()
         {
             if (Instance == null)
             {
-                Instance = entity;
-                DontDestroyOnLoad(this.gameObject);
+                Instance = this;
             }
             else
             {
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             }
-
-
-
         }
 
 
 
-
     }
-
 }

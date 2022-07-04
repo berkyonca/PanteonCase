@@ -23,9 +23,27 @@ namespace PanteonCase
             
         }
 
+        private void OnCollisionEnter(Collision collision)
+        {
+            IRespawnable _respawnable = collision.gameObject.GetComponent<IRespawnable>();
+            if (_respawnable != null)
+            {
+                _respawnable.Respawning();
+        
+            }
+
+
+        }
+
+
+
+
+
+
+
     }
 
-
+    
 
 
 

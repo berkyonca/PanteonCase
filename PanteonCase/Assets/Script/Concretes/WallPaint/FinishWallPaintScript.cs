@@ -29,13 +29,14 @@ public class FinishWallPaintScript : MonoBehaviour
 
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("player"))
+        if (collision.gameObject.CompareTag("player"))
         {
             counter++;
         }
     }
+    
 
 
 

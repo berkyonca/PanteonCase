@@ -4,20 +4,20 @@ using UnityEngine;
 
 namespace PanteonCase
 {
-    internal class CameraBehaviour : SingletonBehaviour<CameraBehaviour>
+    internal class CameraBehaviour : MonoBehaviour 
     {
 
         [SerializeField] Transform targetPos;
-
+        private SingletonBehaviour instance;
 
         private Vector3 _offSet = new Vector3(0f, 7f, -8f);
 
 
-       /* private void Awake()
+        private void Awake()
         {
-            SingletonObject(this);
+         //   instance.SingletonObject(gameObject);
         }
-       */
+       
         private void FixedUpdate() => CameraPosition();
 
 
