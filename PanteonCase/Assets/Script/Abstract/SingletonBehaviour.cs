@@ -6,6 +6,7 @@ namespace PanteonCase
 {
     public class SingletonBehaviour : MonoBehaviour
     {
+        
 
         public static SingletonBehaviour Instance { get; private set; }
 

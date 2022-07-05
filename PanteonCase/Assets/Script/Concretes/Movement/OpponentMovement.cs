@@ -1,22 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace PanteonCase
 {
 public class OpponentMovement : MonoBehaviour
 {
-    //private Respawn _respawn;
-
-        
-
-        private void Update()
-    {
-            
-      //  _respawn.Respawner(gameObject);
-    }
+   [SerializeField] private Transform movePositionTransform;
+   private NavMeshAgent navMeshAgent;
 
 
+
+
+   private void Awake()
+   {
+    navMeshAgent = GetComponent<NavMeshAgent>();
+   }
+
+
+   private void Update()
+   {
+    navMeshAgent.destination = movePositionTransform.transform.position;
+   }
+
+
+
+
+
+
+
+
+
+
+   
 
 }
 
