@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8890448393551702369}
   - component: {fileID: 8726936685105461448}
   - component: {fileID: 369653225642487096}
+  - component: {fileID: 163213483}
   m_Layer: 0
   m_Name: StaticObstacle
   m_TagString: obstacle
@@ -109,3 +110,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ccbe7947b634f041bb563b9586a59f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!208 &163213483
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6945056151129606324}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.05, y: 0.045, z: 0.01}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

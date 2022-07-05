@@ -5,7 +5,7 @@ using UnityEngine;
 namespace PanteonCase
 {
 
-    public class Player : MonoBehaviour, IDamageable, IRespawnable
+    public class Player : MonoBehaviour,  IRespawnable
     {
         private PlayerMovement _movement;
         private Rigidbody _rb;
@@ -32,11 +32,6 @@ namespace PanteonCase
 
         }
 
-        public void Update()
-        {
-            Damage();
-
-        }
         public void FixedUpdate()
         {
             CharacterRespawn(_yDeathPos);
@@ -50,15 +45,6 @@ namespace PanteonCase
 
 
 
-
-        public void Damage()
-        {
-            if (_damageTaken)
-            {
-                
-                _damageTaken = false;
-            }
-        }
 
 
 
@@ -96,6 +82,13 @@ namespace PanteonCase
             if (collision.gameObject.CompareTag("rotatingObstacle"))
             {
                RotatingObstacleForce();
+            }
+        }
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("obstacle"))
+            {
+                Respawning();
             }
         }
 

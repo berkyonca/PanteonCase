@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: EasyAIOpponent
   m_EditorClassIdentifier: 
   Difficulty: Hard
-  targetPos: {x: -4.18, y: 0, z: 370}
+  targetPos: {x: 7.31, y: 0, z: 370}

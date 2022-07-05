@@ -17,7 +17,6 @@ public class StaticObstacleBehaviour : MonoBehaviour
             Debug.Log("Ýnterface Çalýþtý.");
         }
 
-
     }
 
 

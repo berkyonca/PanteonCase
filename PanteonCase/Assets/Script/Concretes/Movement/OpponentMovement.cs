@@ -34,6 +34,7 @@ namespace PanteonCase
                 transform.position = new Vector3(Random.Range(-3f, 3f), 0f, Random.Range(-1f, 6f));
                 GetComponent<Rigidbody>().velocity = Vector3.zero;
             }
+            OpponentInRotatorObstacle();
         }
 
 
@@ -41,10 +42,7 @@ namespace PanteonCase
         {
 
 
-            OpponentInRotatorObstacle();
-
-
-
+            
 
 
         }
@@ -69,7 +67,20 @@ namespace PanteonCase
 
             }
 
+        }
 
+        private void OnCollisionEnter(Collision collision)
+        {
+            if(collision.gameObject.CompareTag("obstacle"))
+            {
+                Respawning();
+            }
+        }
+
+        public void Respawning()
+        {
+            transform.position = new Vector3(Random.Range(-3f, 3f), 0f, Random.Range(-1f, 6f));
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
 
 

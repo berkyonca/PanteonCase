@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _xPosLeft: -24
   _xPosRight: -8
+  _horizontalSpeed: 8
 --- !u!208 &786895266150053380
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -122,9 +123,9 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.05, y: 0.14, z: 0.05}
+  m_Extents: {x: 0.02, y: 0.14, z: 0.02}
   m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
