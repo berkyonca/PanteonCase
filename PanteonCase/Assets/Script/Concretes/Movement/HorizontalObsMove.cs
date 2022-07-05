@@ -9,14 +9,14 @@ namespace PanteonCase
 
         [SerializeField] [Range(-5, 5)] private float _xPosLeft;
         [SerializeField] [Range(-5, 5)] private float _xPosRight;
-
+        [SerializeField] [Range(0, 20)] private float _horizontalSpeed;
 
 
 
 
         private void FixedUpdate()
         {
-            VerticalMovement(7);
+            HorizontalMovement(_horizontalSpeed);
             DirectionChanger(_xPosLeft, _xPosRight);
 
 

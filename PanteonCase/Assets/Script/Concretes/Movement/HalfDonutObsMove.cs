@@ -13,7 +13,7 @@ public class HalfDonutObsMove : ObstacleMovement
 
     private void FixedUpdate()
     {
-        VerticalMovement(moveSpeed);
+        HorizontalMovement(moveSpeed);
         DirectionChanger(_xPosLeft, _xPosRight);
     }
 
@@ -24,7 +24,7 @@ public class HalfDonutObsMove : ObstacleMovement
         if (_respawnable != null)
         {
             _respawnable.Respawning();
-            Debug.Log("Ýnterface Çalýþtý.");
+            Debug.Log("ï¿½nterface ï¿½alï¿½ï¿½tï¿½.");
         }
 
 

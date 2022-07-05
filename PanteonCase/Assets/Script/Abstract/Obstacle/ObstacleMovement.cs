@@ -8,7 +8,7 @@ public class ObstacleMovement : MonoBehaviour
 
 
 
-    public virtual void VerticalMovement(float _xPosSpeed)
+    public virtual void HorizontalMovement(float _xPosSpeed)
     {
 
         transform.Translate(Vector3.right * Time.deltaTime * _xPosSpeed * _directionChange);
