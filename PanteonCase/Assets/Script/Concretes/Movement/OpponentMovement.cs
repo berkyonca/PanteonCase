@@ -24,6 +24,12 @@ namespace PanteonCase
 
         private void Update()
         {
+            
+        }
+
+
+        private void FixedUpdate()
+        {
             if (yapayZekaAktif)
             {
                 navMeshAgent.destination = _difficulty.targetPos;
@@ -35,17 +41,10 @@ namespace PanteonCase
                 GetComponent<Rigidbody>().velocity = Vector3.zero;
             }
             OpponentInRotatorObstacle();
-        }
-
-
-        private void FixedUpdate()
-        {
-
-
-            
 
 
         }
+
 
         void OpponentInRotatorObstacle()
         {

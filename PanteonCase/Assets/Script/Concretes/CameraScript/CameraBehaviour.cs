@@ -9,6 +9,7 @@ namespace PanteonCase
 
         [SerializeField] Transform targetPos;
         private SingletonBehaviour instance;
+        Vector3 _focusPos;
 
         private Vector3 _offSet = new Vector3(0f, 7f, -8f);
 
@@ -17,13 +18,20 @@ namespace PanteonCase
         {
          //   instance.SingletonObject(gameObject);
         }
-       
-        private void FixedUpdate() => CameraPosition();
+        private void FixedUpdate()
+        {
+            
+            CameraPosition();
+        }
 
+        private void LateUpdate()
+        {
+            _focusPos = targetPos.position + _offSet;
+        }
 
         private void CameraPosition()
         {
-            Vector3 _focusPos = targetPos.position + _offSet;
+            
             transform.position = Vector3.Lerp(transform.position, _focusPos, 8 * Time.deltaTime);
         }
 

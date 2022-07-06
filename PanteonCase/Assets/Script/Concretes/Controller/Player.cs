@@ -35,7 +35,7 @@ namespace PanteonCase
         public void FixedUpdate()
         {
             CharacterRespawn(_yDeathPos);
-            _movement.PlayerMove(50f, _horizontalSpeed);
+            _movement.PlayerMove(60f, _horizontalSpeed);
             FinishMovement();
         }
 
