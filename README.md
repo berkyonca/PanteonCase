@@ -24,7 +24,7 @@ Hello dear panteon developer. This project is my 1 week journey, all this time i
   ![image](https://user-images.githubusercontent.com/93132446/177724354-ccc90ac5-bd71-4882-a5f3-b35d4bde8df7.png)
 
 
-  For player, i used singleton pattern and for painting to wall, i used observer pattern.
+  For player i used singleton pattern and for painting to wall i used observer pattern.
   
   
   
