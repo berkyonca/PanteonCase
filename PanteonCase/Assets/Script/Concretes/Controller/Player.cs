@@ -7,16 +7,20 @@ namespace PanteonCase
 
     public class Player : MonoBehaviour,  IRespawnable
     {
+        public delegate void PaintingWall();
+        public static event PaintingWall paintWall;
+
         private PlayerMovement _movement;
         private Rigidbody _rb;
         private Animator _anim;
+
         private float moveBorder = 9f;
         private float _yDeathPos = -8f;
         private float _horizontalSpeed = 10f;
+
         [SerializeField] private GameObject _finishWall;
 
-        private float _xValue;
-        float _sayi;
+       
 
         
         public bool _damageTaken { get; set; } = false;
@@ -31,9 +35,11 @@ namespace PanteonCase
             _movement = new PlayerMovement(this);
             _anim = GetComponent<Animator>();
 
-
-
         }
+
+        private void Update() => WallIsPainting();
+
+
 
         public void FixedUpdate()
         {
@@ -44,12 +50,44 @@ namespace PanteonCase
 
 
 
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.tag == "finishStructure")
+            {
+                PlayerWin();
+            }
+        }
 
 
 
+        public void OnCollisionStay(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("rotatingObstacle"))
+            {
+               RotatingObstacleForce();
+            }
+        }
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("obstacle"))
+            {
+                Respawning();
+            }
+        }
 
 
 
+        private void WallIsPainting()
+        {
+            if (_movement.isFinish && paintWall != null)
+            {
+                if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+                {
+                    paintWall();
+                }
+;
+            }
+        }
 
         public void RotatingObstacleForce()
 
@@ -68,36 +106,9 @@ namespace PanteonCase
 
 
 
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag("finishStructure"))
-            {
-                _finishWall.SetActive(true);
-                PlayerWin();
-                Debug.Log("Bitiþ çizgisine geldin, PlayerWin çalýþtý");
-
-            }
-        }
-
-
-        public void OnCollisionStay(Collision collision)
-        {
-            if (collision.gameObject.CompareTag("rotatingObstacle"))
-            {
-               RotatingObstacleForce();
-            }
-        }
-        private void OnCollisionEnter(Collision collision)
-        {
-            if (collision.gameObject.CompareTag("obstacle"))
-            {
-                Respawning();
-            }
-        }
-
         private void PlayerWin()
         {
+            _finishWall.SetActive(true);
             _anim.enabled = false;
             _movement.isFinish = true;
         }

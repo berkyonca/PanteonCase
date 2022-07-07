@@ -24,7 +24,6 @@ public class HalfDonutObsMove : ObstacleMovement
         if (_respawnable != null)
         {
             _respawnable.Respawning();
-            Debug.Log("�nterface �al��t�.");
         }
 
 

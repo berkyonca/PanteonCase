@@ -10,14 +10,13 @@ namespace PanteonCase
 
         private Rigidbody _rb;
 
-        private float _moveBorder;
+
         public bool isFinish = false;
 
         public PlayerMovement(Player player)
         {
             _player = player;
             _rb = player.GetComponent<Rigidbody>();
-            _moveBorder = player.xBorder;
         }
 
         public void PlayerMove(float _verticalSpeed, float _horizontalSpeed)
