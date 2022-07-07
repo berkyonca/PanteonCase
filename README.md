@@ -31,6 +31,12 @@ Hello dear panteon developer. This project is my 1 week journey, all this time i
   ![image](https://user-images.githubusercontent.com/93132446/177724915-6cfa797c-bb0d-4c7e-9846-843a459e7aa4.png)
 
   ![image](https://user-images.githubusercontent.com/93132446/177724678-9523114f-5b10-46fd-9c61-30bfbfab6758.png)
+  
+  
+  I also wrote and applied a player ranking system algorithm to the project.
+  
+  ![image](https://user-images.githubusercontent.com/93132446/177727590-b2003b79-51d3-45dc-9046-74d77bee8584.png)
+
 
 
   
