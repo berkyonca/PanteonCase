@@ -17,27 +17,7 @@ public class FinishWallPaintScript : MonoBehaviour
 
         EnablePaintObject(counter);
 
-    }
-
-
-    private void EnablePaintObject(int _counter)
-    {
-
-        if (_counter == Mathf.Clamp(_counter, 0f, 20f))
-        {
-            transform.GetChild(_counter).gameObject.SetActive(true);
-        }
-
-
-    }
-
-
-
-
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("player"))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
         {
             counter++;
             _paintPercent = Mathf.Clamp(counter + 1, 0, 20) * 5;
@@ -48,10 +28,27 @@ public class FinishWallPaintScript : MonoBehaviour
             {
                 _winTextPanel.SetActive(true);
             }
-
         }
+
+
+
     }
-    
+
+
+    private void EnablePaintObject(int _counter)
+    {
+
+        if (_counter == Mathf.Clamp(_counter, 0f, 19f))
+        {
+            transform.GetChild(_counter).gameObject.SetActive(true);
+        }
+
+
+    }
+
+
+
+
 
 
 

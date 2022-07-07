@@ -10,6 +10,7 @@ TagManager:
   - rotatingObstacle
   - finishStructure
   - paintController
+  - opponent
   layers:
   - Default
   - TransparentFX

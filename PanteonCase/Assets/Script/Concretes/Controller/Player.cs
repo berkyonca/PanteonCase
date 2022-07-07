@@ -9,6 +9,7 @@ namespace PanteonCase
     {
         private PlayerMovement _movement;
         private Rigidbody _rb;
+        private Animator _anim;
         private float moveBorder = 9f;
         private float _yDeathPos = -8f;
         private float _horizontalSpeed = 10f;
@@ -28,6 +29,7 @@ namespace PanteonCase
    
             _rb = GetComponent<Rigidbody>();
             _movement = new PlayerMovement(this);
+            _anim = GetComponent<Animator>();
 
 
 
@@ -96,8 +98,8 @@ namespace PanteonCase
 
         private void PlayerWin()
         {
+            _anim.enabled = false;
             _movement.isFinish = true;
-            _horizontalSpeed = 45f;
         }
 
         private void FinishMovement()
