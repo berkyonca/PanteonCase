@@ -18,10 +18,15 @@ Hello dear panteon developer. This project is my 1 week journey, all this time i
 
 
   I used some interface for player and opponents. 
+  
+  
+  
   ![image](https://user-images.githubusercontent.com/93132446/177724354-ccc90ac5-bd71-4882-a5f3-b35d4bde8df7.png)
 
 
   For player, i used singleton pattern and for painting to wall, i used observer pattern.
+  
+  
   
   ![image](https://user-images.githubusercontent.com/93132446/177724915-6cfa797c-bb0d-4c7e-9846-843a459e7aa4.png)
 
