@@ -12,6 +12,7 @@ namespace PanteonCase
         private float moveBorder = 9f;
         private float _yDeathPos = -8f;
         private float _horizontalSpeed = 10f;
+        [SerializeField] private GameObject _finishWall;
 
         private float _xValue;
         float _sayi;
@@ -70,6 +71,7 @@ namespace PanteonCase
         {
             if (other.CompareTag("finishStructure"))
             {
+                _finishWall.SetActive(true);
                 PlayerWin();
                 Debug.Log("Bitiþ çizgisine geldin, PlayerWin çalýþtý");
 
